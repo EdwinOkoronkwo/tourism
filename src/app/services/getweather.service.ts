@@ -30,7 +30,7 @@ export class GetweatherService {
   }
 
   getStatistics(data: IWeatherInfo) {
-    const { id, name, visitTo, visitFrom, ...rest } = data;
+    const { id, name, visitTo, visitFrom, image, ...rest } = data;
     let tempObj = rest;
     const sumValues = Object.values(tempObj).reduce((a, b) => a + b, 0);
     const result = {

@@ -17,13 +17,7 @@ export class WeatherDetailsComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private _weatherData: GetweatherService
-  ) {
-    // const routeParams = this.route.snapshot.paramMap;
-    // const weatherIdFromRoute = Number(routeParams.get('id'));
-    // this.weather = this._weatherData
-    //   .getWeather()
-    //   .find((weather) => weather.id === weatherIdFromRoute);
-  }
+  ) {}
 
   ngOnInit(): void {
     const routeParams = this.route.snapshot.paramMap;

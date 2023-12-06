@@ -11,6 +11,7 @@ export interface IWeatherInfo {
   autumnN: number;
   visitFrom: Month;
   visitTo: Month;
+  image: string;
 }
 
 export enum Month {
