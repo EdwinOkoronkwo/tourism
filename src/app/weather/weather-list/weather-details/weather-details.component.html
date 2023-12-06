@@ -1,0 +1,78 @@
+<div>
+  <h2>{{ weather.name }}</h2>
+</div>
+<div class="ui divider"></div>
+
+<div>
+  <h2>Temperature Summary (°C)</h2>
+</div>
+<div class="ui statistics">
+  <div class="statistic">
+    <div class="value">{{ stats().avg }}</div>
+    <div class="label">Average</div>
+  </div>
+  <div class="statistic">
+    <div class="value">{{ stats().max }}</div>
+    <div class="label">Max</div>
+  </div>
+  <div class="statistic">
+    <div class="value">{{ stats().min }}</div>
+    <div class="label">Min</div>
+  </div>
+</div>
+
+<div class="ui divider"></div>
+<fieldset>
+  <table class="ui table celled">
+    <thead>
+      <tr>
+        <th [attr.colspan]="1 + 1" class="head">Spring</th>
+        <th [attr.colspan]="1 + 1" class="head">Summer</th>
+        <th [attr.colspan]="1 + 1" class="head">Autumn</th>
+        <th [attr.colspan]="1 + 1" class="head">Winter</th>
+      </tr>
+    </thead>
+    <thead>
+      <tr>
+        <th>Spring Morning</th>
+        <th>Spring Evening</th>
+        <th>Summer Morning</th>
+        <th>Summer Evening</th>
+        <th>Autumn Morning</th>
+        <th>Autumn Evening</th>
+        <th>Winter Morning</th>
+        <th>Winter Evening</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>{{ weather.springM }}</td>
+        <td>{{ weather.springN }}</td>
+        <td>{{ weather.summerM }}</td>
+        <td>{{ weather.summerN }}</td>
+        <td>{{ weather.autumnM }}</td>
+        <td>{{ weather.autumnN }}</td>
+        <td>{{ weather.winterM }}</td>
+        <td>{{ weather.winterN }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <br />
+</fieldset>
+
+<div class="ui divider"></div>
+<div>
+  <h2>Month to Visit</h2>
+</div>
+
+<div class="ui statistics">
+  <div class="statistic">
+    <div class="value">{{ visitFrom() }}</div>
+    <div class="label">Visit From</div>
+  </div>
+  <div class="statistic">
+    <div class="value">{{ visitTo() }}</div>
+    <div class="label">Visit To</div>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<div *ngFor="let weather of weatherData">
+  <br />
+  <p *ngIf="weather.summerM > 42">
+    <button class="ui button primary" type="button" (click)="notify.emit()">
+      Notify Me
+    </button>
+  </p>
+</div>
+<!-- <p *ngIf="weather && weather">
+  <button></button>
+</p> -->

@@ -1,0 +1,41 @@
+<app-divider>Major Tourist Cities</app-divider>
+
+<div *ngFor="let cityName of cities">
+  <div>
+    <h2>{{ cityName.name }}</h2>
+  </div>
+  <div class="ui divider"></div>
+  <table class="ui table celled">
+    <!-- <thead>
+      <tr>
+        <th [attr.colspan]="1 + 1" class="head">Spring</th>
+        <th [attr.colspan]="1 + 1" class="head">Summer</th>
+        <th [attr.colspan]="1 + 1" class="head">Autumn</th>
+        <th [attr.colspan]="1 + 1" class="head">Winter</th>
+      </tr>
+    </thead> -->
+    <thead>
+      <tr>
+        <th>Site 1</th>
+        <th>Site 2</th>
+        <th>Site 3</th>
+        <th>Site 4</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>{{ cityName.attractionSites[0] }}</td>
+        <td>{{ cityName.attractionSites[1] }}</td>
+        <td>{{ cityName.attractionSites[2] }}</td>
+        <td>{{ cityName.attractionSites[3] }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <br />
+</div>
+
+<div class="ui divider"></div>
+<button class="ui button teal" type="button" (click)="weatherPage()">
+  Go to Weather
+</button>

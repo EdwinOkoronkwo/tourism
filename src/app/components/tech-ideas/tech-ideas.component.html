@@ -1,0 +1,77 @@
+<app-divider>Innovative Ideas</app-divider>
+
+<form class="ui form" [formGroup]="techIdeasForm" (ngSubmit)="onSubmit()">
+  <div class="field">
+    <app-input
+      label="Name"
+      [control]="$any(techIdeasForm.controls?.['name'])"
+    ></app-input>
+  </div>
+  <div class="field">
+    <app-input
+      label="Email"
+      [control]="$any(techIdeasForm.controls?.['email'])"
+    ></app-input>
+  </div>
+
+  <div class="two fields">
+    <div class="field">
+      <app-input
+        label="Age"
+        [control]="$any(techIdeasForm.controls?.['age'])"
+      ></app-input>
+    </div>
+    <div class="field">
+      <!-- [cities]="cities" -->
+      <app-input
+        [cities]="$any(cities)"
+        label="City"
+        [control]="$any(techIdeasForm.controls?.['city'])"
+      ></app-input>
+    </div>
+  </div>
+  <div class="field">
+    <app-input
+      label="Brief about your technical ideas"
+      [control]="$any(techIdeasForm.controls?.['brief'])"
+    ></app-input>
+  </div>
+  <div class="button">
+    <button
+      [disabled]="techIdeasForm.invalid"
+      class="ui submit button primary"
+      type="submit"
+    >
+      Submit
+    </button>
+    <button class="ui button warning" type="submit">Reset</button>
+  </div>
+</form>
+
+<!-- <div class="field">
+    <label>Name</label>
+    <input type="text" name="userName" placeholder="Username" />
+  </div>
+  <div class="field">
+    <label>E-mail</label>
+    <input type="email" name="userEmail" placeholder="Email" />
+  </div>
+  <div class="two fields">
+    <div class="field">
+      <label>Age</label>
+      <input type="number" name="userAge" placeholder="Age" />
+    </div>
+    <div class="field">
+      <label>Target City</label>
+      <select class="ui fluid dropdown">
+        <option value="{{ cities }}" *ngFor="let city of cities">
+          {{ city }}
+        </option>
+      </select>
+    </div>
+  </div>
+
+  <div class="field">
+    <label>Brief about your technical ideas:</label>
+    <textarea rows="2"></textarea>
+  </div> -->

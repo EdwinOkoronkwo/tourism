@@ -1,0 +1,84 @@
+<div class="field">
+  <label class="label">{{ label }}</label>
+
+  <div [ngSwitch]="label">
+    <div *ngSwitchCase="'City'">
+      <select
+        class="ui fluid dropdown"
+        [ngClass]="{
+          'is-danger': showErrors()
+        }"
+        class="input"
+        [formControl]="control"
+      >
+        <option value="{{ cities }}" *ngFor="let city of cities">
+          {{ city }}
+        </option>
+      </select>
+    </div>
+
+    <div *ngSwitchCase="'Brief about your technical ideas'">
+      <textarea
+        rows="2"
+        [ngClass]="{
+          'is-danger': showErrors()
+        }"
+        class="input"
+        [formControl]="control"
+      ></textarea>
+    </div>
+    <div *ngSwitchDefault>
+      <input
+        [ngClass]="{
+          'is-danger': showErrors()
+        }"
+        class="input"
+        [formControl]="control"
+      />
+    </div>
+  </div>
+
+  <ng-container *ngIf="showErrors()">
+    <div
+      class="ui pointing red basic label"
+      *ngIf="control.errors?.['required']"
+    >
+      Value is required
+    </div>
+    <div
+      class="ui pointing red basic label"
+      *ngIf="control.errors?.['minlength']"
+    >
+      Value you entered is
+      {{$any(control).errors?.['minlength'].actualLength}}
+      characters long, but it must be at least
+      {{$any(control).errors?.['minlength'].requiredLength}}
+      characters.
+    </div>
+    <div
+      class="ui pointing red basic label"
+      *ngIf="control.errors?.['maxlength']"
+    >
+      Value you entered is
+      {{$any(control).errors?.['maxlength'].actualLength}}
+      characters long, but it cannot be longer than
+      {{$any(control).errors?.['maxlength'].requiredLength}}
+      characters.
+    </div>
+    <div
+      class="ui pointing red basic label"
+      *ngIf="control.errors?.['prohibited']"
+    >
+      The word is not allowed
+    </div>
+    <div class="ui pointing red basic label" *ngIf="control.errors?.['email']">
+      The email is invalid
+    </div>
+    <div
+      class="ui pointing red basic label"
+      *ngIf="control.errors?.['pattern']"
+    >
+      Age must be a number and must not be greater than 99
+    </div>
+  </ng-container>
+</div>

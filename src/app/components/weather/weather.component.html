@@ -1,0 +1,97 @@
+<!-- <div>
+  <ul>
+    <li *ngFor="let weather of weatherData" class="removebullet">
+      <a
+        [routerLink]="[
+          '/weather',
+          weather.springN,
+          weather.springM,
+          weather.summerN,
+          weather.summerM,
+          weather.winterN,
+          weather.winterM,
+          weather.autumnN,
+          weather.autumnM,
+          weather.visitFrom,
+          weather.visitTo
+        ]"
+        >{{ weather.name }}</a
+      >
+    </li>
+  </ul>
+</div> -->
+<app-divider>Weather Menu</app-divider>
+<app-tabs>
+  <a
+    class="item"
+    routerLink="./"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }"
+    >Cairo</a
+  >
+  <a class="item" routerLink="./aswan" routerLinkActive="active">Aswan</a>
+  <a class="item" routerLink="./luxor" routerLinkActive="active">Luxor</a>
+  <a class="item" routerLink="./sharm" routerLinkActive="active">Sharm</a>
+</app-tabs>
+
+<div class="ui divider"></div>
+<button class="ui button teal" type="button" (click)="weatherPage()">
+  Weather List
+</button>
+
+<!-- <app-divider>Weather Menu</app-divider>
+<div>
+  <a class="item" routerLink="./:id" routerLinkActive="active"
+    >Weather Detail</a
+  >
+</div> -->
+
+<!-- <div>
+  <tr>
+    <td [attr.colspan]="1 + 1">New Data</td>
+  </tr>
+</div> -->
+<!-- <br />
+<fieldset *ngFor="let weather of weatherData">
+  <caption>
+    Weather in{{
+      weather.name
+    }}
+  </caption>
+  <table>
+    <thead>
+      <tr>
+        <th [attr.colspan]="1 + 1" class="head">Spring</th>
+        <th [attr.colspan]="1 + 1" class="head">Summer</th>
+        <th [attr.colspan]="1 + 1" class="head">Autumn</th>
+        <th [attr.colspan]="1 + 1" class="head">Winter</th>
+      </tr>
+    </thead>
+    <thead>
+      <tr>
+        <th>Spring Morning</th>
+        <th>Spring Evening</th>
+        <th>Summer Morning</th>
+        <th>Summer Evening</th>
+        <th>Autumn Morning</th>
+        <th>Autumn Evening</th>
+        <th>Winter Morning</th>
+        <th>Winter Evening</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>{{ weather.summerM }}</td>
+        <td>{{ weather.springN }}</td>
+        <td>{{ weather.summerM }}</td>
+        <td>{{ weather.summerN }}</td>
+        <td>{{ weather.autumnM }}</td>
+        <td>{{ weather.autumnN }}</td>
+        <td>{{ weather.winterM }}</td>
+        <td>{{ weather.winterN }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <br />
+</fieldset> -->

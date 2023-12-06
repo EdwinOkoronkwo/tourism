@@ -1,0 +1,39 @@
+fieldset {
+  align-items: center;
+}
+
+table {
+  margin: auto;
+  border: 5px solid #000066;
+  border-spacing: 0;
+  width: 800px;
+}
+
+td,
+th {
+  border: 1px solid #000066;
+  padding: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-style: none;
+  text-transform: capitalize;
+}
+caption {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 700;
+  font-size: 1.2em;
+  padding-bottom: 5px;
+  display: inline;
+}
+
+th {
+  background-color: #eaeaea;
+}
+
+tr:nth-of-type(2n) {
+  background-color: #eaeaea;
+}
+
+/* .head {
+  display: flex;
+  justify-content: center;
+} */

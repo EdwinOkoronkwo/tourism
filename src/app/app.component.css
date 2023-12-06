@@ -1,0 +1,33 @@
+nav,
+footer {
+  position: fixed;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  top: 0%;
+  left: 0%;
+  text-align: center;
+  background-color: rgb(192, 192, 192, 1);
+}
+
+a {
+  display: inline;
+  padding: 10px;
+  color: black;
+}
+
+footer {
+  position: fixed;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  top: 95%;
+  left: 0%;
+  text-align: center;
+  background-color: rgb(192, 192, 192, 0.3);
+}
+
+.active {
+  color: red;
+  background-color: orange;
+}
